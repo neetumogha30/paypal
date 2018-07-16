@@ -39,7 +39,7 @@ class paypalExpress
             $response = curl_exec($curl);
             $result = json_decode($response);
             
-            
+            $state = $result->state;
             $total = $result->transactions[0]->amount->total;
             $currency = $result->transactions[0]->amount->currency;            
             $recipient_name = $result->transactions[0]->item_list->shipping_address->recipient_name;

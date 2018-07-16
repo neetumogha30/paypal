@@ -14,7 +14,8 @@ if(!empty($_GET['paymentID']) && !empty($_GET['payerID']) && !empty($_GET['token
     $token = $_GET['token'];
     $pid = $_GET['pid'];
     
-    //$paypalCheck=$paypalExpress->paypalCheck($paymentID, $pid, $payerID, $token);
+    $paypalCheck=$paypalExpress->paypalCheck($paymentID, $pid, $payerID, $token);
+	print $paypalCheck;
    // if($paypalCheck){
      //   header('Location:orders.php');
         
